@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000/api'
+// In dev: uses localhost. In production build: uses VITE_API_URL from .env
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
 // Helper to make fetch calls easily
 const request = async (endpoint, options = {}) => {

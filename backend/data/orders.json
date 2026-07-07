@@ -1,0 +1,41 @@
+[
+  {
+    "_id": "jlpbr2rmrarx35n",
+    "createdAt": "2026-07-07T14:58:08.315Z",
+    "orderNumber": "27887607672",
+    "email": "yahiawork11@gmail.com",
+    "shippingAddress": {
+      "country": "مصر",
+      "firstName": "Yahia",
+      "lastName": "Mostafa",
+      "address": "roijrowi",
+      "city": "werior",
+      "zipCode": "12385"
+    },
+    "items": [
+      {
+        "productId": "pillow",
+        "title": "طقم وسائد",
+        "price": 750,
+        "qty": 1
+      },
+      {
+        "productId": "ring",
+        "title": "الخواتم الذكية",
+        "price": 2200,
+        "qty": 1
+      },
+      {
+        "productId": "honey",
+        "title": "عسل نحل طبيعي",
+        "price": 250,
+        "qty": 2
+      }
+    ],
+    "wrapProduct": false,
+    "subtotal": 3450,
+    "shippingCost": 100,
+    "total": 3550,
+    "user": "unw82xumraruqnp"
+  }
+]
