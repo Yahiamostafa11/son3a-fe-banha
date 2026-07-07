@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import fs from 'fs'
 
 import { connectDB } from './config/db.js'
 import { Product } from './models/Product.js'
@@ -43,7 +44,31 @@ app.get('*', (req, res) => {
   if (req.originalUrl.startsWith('/api')) {
     return res.status(404).json({ message: 'API Endpoint not found' })
   }
-  res.sendFile(path.join(distPath, 'index.html'))
+  
+  const indexPath = path.join(distPath, 'index.html')
+  if (!fs.existsSync(indexPath)) {
+    return res.status(200).send(`
+      <html>
+        <head>
+          <title>Frontend Build Missing</title>
+          <meta charset="utf-8">
+        </head>
+        <body style="font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f8fafc; color: #1e293b;">
+          <h2 style="color: #ef4444;">⚠️ Frontend Build Missing / المجلد غير موجود</h2>
+          <p>Please run the following commands in your Hostinger Terminal or SSH to compile the frontend:</p>
+          <p>يرجى تشغيل الأوامر التالية في الطرفية لبناء واجهة المستخدم:</p>
+          <pre style="background: #1e293b; color: #f8fafc; padding: 15px; border-radius: 8px; display: inline-block; text-align: left; font-family: monospace;">
+cd ~/repositories/son3a/frontend
+npm install
+npm run build
+          </pre>
+          <p style="margin-top: 20px; font-size: 0.9rem; color: #64748b;">Once built, refresh this page.</p>
+        </body>
+      </html>
+    `)
+  }
+  
+  res.sendFile(indexPath)
 })
 
 // Global Error Handler
