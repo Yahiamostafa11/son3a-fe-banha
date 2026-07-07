@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 import { connectDB } from './config/db.js'
 import { Product } from './models/Product.js'
@@ -15,6 +17,11 @@ dotenv.config()
 
 const app = express()
 
+// Resolve dirname
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const distPath = path.join(__dirname, '../../frontend/dist')
+
 // Middleware
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
@@ -27,9 +34,16 @@ app.use('/api/auth', authRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/orders', orderRoutes)
 
-// Default Health Route
-app.get('/', (req, res) => {
-  res.json({ message: '🎓 Made in Banha API is running successfully!' })
+// Serve static React files in production
+app.use(express.static(distPath))
+
+// All non-API routes serve React's index.html (client-side routing)
+app.get('*', (req, res) => {
+  // If request wants /api/ route but not found, send JSON 404
+  if (req.originalUrl.startsWith('/api')) {
+    return res.status(404).json({ message: 'API Endpoint not found' })
+  }
+  res.sendFile(path.join(distPath, 'index.html'))
 })
 
 // Global Error Handler
