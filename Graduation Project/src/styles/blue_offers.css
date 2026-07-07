@@ -1,0 +1,198 @@
+.monthly-offers-section {
+  padding: 140px 20px 40px;
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+}
+
+.offers-container {
+  background-color: #2563eb;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 60px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+.character-side {
+  position: absolute;
+  left: -40px;
+  bottom: -35px;
+  width: 420px;
+  height: 520px;
+  z-index: 3;
+  overflow: visible;
+  transform: scale(1.35);
+  transform-origin: bottom left;
+}
+
+.painter-character {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(15px 10px 25px rgba(0, 0, 0, 0.2));
+}
+
+.content-side {
+  width: 55%;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.offers-main-title {
+  color: #ffffff;
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.discount-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.gold-discount-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  text-align: center;
+}
+
+.gold-num {
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffe082 0%, #ffb300 25%, #ffa000 50%, #ffcc00 75%, #fff8e1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+.gold-word {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: -5px;
+  background: linear-gradient(135deg, #ffe082 0%, #ffb300 30%, #ffa000 60%, #fff8e1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.discount-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 420px;
+}
+
+.buy-now-btn {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: none;
+  padding: 14px 50px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.countdown-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.timer-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.time-box span {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.num-card {
+  background-color: #ffffff;
+  color: #2563eb;
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 992px) {
+  .offers-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 280px;
+  }
+  .character-side {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
+  .content-side {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .discount-badge-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

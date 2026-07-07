@@ -1,0 +1,31 @@
+# Dependencies
+Graduation Project/node_modules/
+
+# Build output
+Graduation Project/dist/
+Graduation Project/dist-ssr/
+Graduation Project/.vite/
+
+# Local environment files
+Graduation Project/.env
+Graduation Project/.env.*
+Graduation Project/*.local
+
+# Logs
+Graduation Project/logs/
+Graduation Project/*.log
+Graduation Project/npm-debug.log*
+Graduation Project/yarn-debug.log*
+Graduation Project/yarn-error.log*
+Graduation Project/pnpm-debug.log*
+Graduation Project/lerna-debug.log*
+
+# Editor and OS files
+Graduation Project/.vscode/
+Graduation Project/.idea/
+Graduation Project/.DS_Store
+Graduation Project/*.suo
+Graduation Project/*.ntvs*
+Graduation Project/*.njsproj
+Graduation Project/*.sln
+Graduation Project/*.sw?

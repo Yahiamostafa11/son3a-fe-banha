@@ -1,0 +1,164 @@
+.orange-home-wrapper {
+  background-color: #ffffff;
+  min-height: 100vh;
+  direction: rtl;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.orange-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: #ffffff;
+}
+
+.orange-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.orange-logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #e06d53;
+  margin-left: 15px;
+  cursor: default;
+  user-select: none;
+}
+
+.orange-nav-right a {
+  color: #475569;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.orange-nav-right a:hover {
+  color: #e06d53;
+}
+
+.orange-nav-right .orange-nav-active {
+  color: #e06d53;
+}
+
+.orange-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.orange-login-btn {
+  color: #475569;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.orange-signup-btn {
+  border: 1.5px solid #1d2352;
+  padding: 10px 22px;
+  border-radius: 50px;
+  color: #1d2352;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.orange-signup-btn:hover {
+  background-color: #1d2352;
+  color: #ffffff;
+}
+
+.orange-lang-selector-container {
+  position: relative;
+}
+
+.orange-lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #475569;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.orange-lang-selector .arrow-down {
+  transform: rotate(180deg);
+  display: inline-block;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.orange-lang-selector .arrow-down.open {
+  transform: rotate(0deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  min-width: 120px;
+  overflow: hidden;
+}
+
+.lang-dropdown-menu div {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.lang-dropdown-menu div:hover {
+  background-color: #f8fafc;
+  color: #e06d53;
+}
+
+.orange-hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 80px;
+  background-color: #ffffff;
+}
+
+.poster-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-orange-poster {
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .orange-navbar {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .orange-nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}

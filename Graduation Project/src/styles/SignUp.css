@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#f7f7f7;
+    direction:rtl;
+}
+
+/* ================= Wrapper ================= */
+
+.page-wrapper{
+    width:95%;
+    min-height:92vh;
+
+    margin:25px auto;
+
+    background:white;
+
+    border-radius:40px;
+    border:1px solid #ededed;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ================= Background Shapes ================= */
+
+.top-shape{
+    position:absolute;
+
+    top:-230px;
+    left:-230px;
+
+    width:520px;
+    height:520px;
+
+    background:#FDE8DF;
+
+    border-radius:50%;
+}
+
+.bottom-shape{
+    position:absolute;
+
+    bottom:-230px;
+    right:-230px;
+
+    width:520px;
+    height:520px;
+
+    background:#FDE8DF;
+
+    border-radius:50%;
+}
+
+/* ================= Container ================= */
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:100px;
+
+    padding:50px 80px;
+
+    flex-direction:row-reverse;
+
+    position:relative;
+    z-index:2;
+}
+
+/* ================= Image ================= */
+
+.login-image{
+    width:45%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.Main{
+    width:450px;
+    object-fit:contain;
+}
+
+/* ================= Form ================= */
+
+.login-form{
+    width:470px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+}
+/* ================= Logo ================= */
+
+.logo{
+    width:140px;
+    margin-bottom:10px;
+}
+
+/* ================= Title ================= */
+
+.login-form h1{
+    font-size:25px;
+    font-weight:500;
+    color:#222;
+    margin-bottom:10px;
+}
+
+/* ================= Social Buttons ================= */
+
+.social-login{
+    display:flex;
+    gap:15px;
+}
+
+.social-btn{
+    flex:1;
+
+    height:48px;
+
+    background:white;
+
+    border:1px solid #E7602E;
+
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    font-family:'Cairo';
+
+    color:#555;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.social-btn:hover{
+    background:#fff5f0;
+}
+
+.social-btn img{
+    width:26px;
+    height:26px;
+}
+
+/* ================= Divider ================= */
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.divider span{
+    flex:1;
+    height:1px;
+    background:#ddd;
+}
+
+.divider p{
+    color:#999;
+    font-size:18px;
+}
+
+/* ================= Inputs ================= */
+
+.login-form input{
+    height:55px;
+
+    border:none;
+
+    border-bottom:1px solid #dcdcdc;
+
+    background:transparent;
+
+    font-size:16px;
+
+    font-family:'Cairo';
+
+    padding:0 5px;
+
+    transition:.3s;
+}
+
+.login-form input:focus{
+    outline:none;
+    border-bottom:2px solid #E7602E;
+    
+}
+.name-row{
+    display:flex;
+    gap:20px;
+}
+
+.name-row input{
+    width:50%;
+}
+
+/* ================= Forgot Password ================= */
+
+.forgot-password{
+    color:#E7602E;
+    font-size:15px;
+    font-weight:600;
+    width: fit-content;
+    cursor:pointer;
+    
+}
+.forgot-password:hover{
+    color: #752f15;
+}
+/* ================= Login Button ================= */
+
+.login-btn{
+    height:58px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        90deg,
+        #E7602E,
+        #F08B61
+    );
+
+    color:white;
+
+    font-size:22px;
+
+    font-family:'Changa';
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(231,96,46,.25);
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= Register Button ================= */
+
+.register-btn{
+    height:58px;
+
+    background:white;
+
+    border:1px solid #E7602E;
+
+    border-radius:12px;
+
+    color:#E7602E;
+
+    font-size:22px;
+
+    font-family:'Changa';
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#E7602E;
+    color:white;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:1100px){
+
+    .login-container{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .login-image{
+        width:100%;
+    }
+
+    .Main{
+        width:320px;
+    }
+
+    .login-form{
+        width:100%;
+        max-width:450px;
+    }
+}
